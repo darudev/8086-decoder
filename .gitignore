@@ -1,0 +1,10 @@
+**/debug
+**/dev
+**/output.asm
+**/debug_print.txt
+**/instruction_list
+**/instructions
+**/odin_decoder.bin
+**/zig-cache
+**/zig-out
+
