@@ -21,7 +21,7 @@ mov dx, [bp]
 
 ; Source address calculation plus 8-bit displacement
 mov ah, [bx + si + 4]
-
+ 
 ; Source address calculation plus 16-bit displacement
 mov al, [bx + si + 4999]
 
@@ -35,7 +35,7 @@ mov bp, [5]
 mov bx, [3458]
 
 ; Add
-add bx, [bx+si]
+add bx, [bx + si]
 add bx, [bp]
 add si, 2
 add bp, 2
@@ -44,16 +44,14 @@ add bx, [bp + 0]
 add cx, [bx + 2]
 add bh, [bp + si + 4]
 add di, [bp + di + 6]
-add [bx+si], bx
+add [bx + si], bx
 add [bp], bx
 add [bp + 0], bx
 add [bx + 2], cx
 add [bp + si + 4], bh
 add [bp + di + 6], di
-
 add byte [bx], 34
 add word [bp + si + 1000], 29
-
 add ax, [bp]
 add al, [bx + si]
 add ax, bx
@@ -62,7 +60,7 @@ add ax, 1000
 add al, -30
 add al, 9
 
-sub bx, [bx+si]
+sub bx, [bx + si]
 sub bx, [bp]
 sub si, 2
 sub bp, 2
@@ -96,7 +94,7 @@ cmp bx, [bp + 0]
 cmp cx, [bx + 2]
 cmp bh, [bp + si + 4]
 cmp di, [bp + di + 6]
-cmp [bx+si], bx
+cmp [bx + si], bx
 cmp [bp], bx
 cmp [bp + 0], bx
 cmp [bx + 2], cx
@@ -119,7 +117,7 @@ jnz test_label0
 test_label1:
 jnz test_label0
 jnz test_label1
-
+ 
 label:
 je label
 jl label
